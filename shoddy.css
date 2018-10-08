@@ -9,6 +9,7 @@
 /* Basic font classes */
 .sh-serif{font-family:serif;}
 .sh-sans-serif{font-family:sans-serif;}
+button{font-family:sans-serif;}
 .sh-monospace{font-family:monospace;}
 
 /* Color scheme */
@@ -42,6 +43,10 @@ lgr{color:#c0c0c0;}
 /* Headers, styling etc */
 .sh-item-title {
     font-size:24pt;
+    text-align:center;
+}
+.sh-item-subtitle {
+    font-size:16pt;
     text-align:center;
 }
 ::selection {
@@ -94,25 +99,33 @@ body {
     flex-direction:row;
     flex-flow:row;
     flex-wrap:wrap;
+    justify-content:center;
+    align-items:flex-start;
 }
-.sh-columns-container div {
-    box-sizing:border-box;
-    padding:10px;
+.sh-grid-container div {
+    margin-bottom:auto!important;
 }
 .sh-columns-container-2 {
-    margin:auto;
+    margin:5px auto;
     width:40%;
 }
 .sh-columns-container-3 {
-    margin:auto;
+    margin:5px auto;
     width:23.3333%;
 }
 .sh-rows-container-1 {
-    margin:auto;
+    margin:5px auto;
     width:90%;
 }
-.sh-columns-container-3 div, .sh-columns-container-2 div, .sh-rows-container-1 div {
+.sh-rows-container-1 div, .sh-columns-container-3 div, .sh-columns-container-2 div {
     margin:10px auto;
+}
+.sh-horiz-separator {
+    width:90vw;
+    height:1px;
+    background:#000;
+    background:rgba(0,0,0,0.4);
+    margin:20px auto;
 }
 
 @media screen and (max-width:900px) {
