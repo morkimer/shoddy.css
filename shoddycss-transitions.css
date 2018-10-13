@@ -1,0 +1,22 @@
+/*
+    shoddy.css
+    A shoddy CSS framework
+    developed by Chris Shoeman and Jacob Hinkston
+
+    Source
+    TRANSITIONS
+    v0.2
+*/
+
+.sh-sidebar {
+    transition:height 0.2s ease-out, padding 0.2s;
+}
+.sh-sidebar-cover {
+    transition:background 0.2s;
+}
+.sh-flat-button {
+    transition:background 0.25s;
+}
+.sh-sidebar-container div {
+    transition:background 0.25s;
+}

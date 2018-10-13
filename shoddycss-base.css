@@ -1,0 +1,366 @@
+/*
+    shoddy.css
+    A shoddy CSS framework
+    developed by Chris Shoeman and Jacob Hinkston
+
+    Source
+    BASE
+    v0.2
+*/
+
+/* Basic font classes */
+.sh-serif{font-family:serif;}
+.sh-sans-serif{font-family:sans-serif;}
+button{font-family:sans-serif;}
+.sh-monospace{font-family:monospace;}
+.sh-bold{font-weight:bold;}
+.sh-italic{font-style:italic;}
+.sh-underline{text-decoration:underline;}
+.sh-al-l{text-align:left;}
+.sh-al-c{text-align:center;}
+.sh-al-r{text-align:right;}
+.sh-al-j{text-align:justify;}
+div{box-sizing:border-box;}
+img{display:block;}
+
+/* Color scheme */
+.sh-bg-black {
+    background:#000!important;
+}
+.sh-bg-white {
+    background:#fff!important;
+}
+.sh-bg-dark-grey {
+    background:#333!important;
+}
+.sh-bg-grey {
+    background:#999!important;
+}
+.sh-bg-light-grey {
+    background:#ddd!important;
+}
+.sh-bg-dark-green {
+    background:#226a26!important;
+}
+.sh-bg-green {
+    background:#3ab240!important;
+}
+.sh-bg-light-green {
+    background:#88d08c!important;
+}
+.sh-bg-dark-blue {
+    background:#0c497d!important;
+}
+.sh-bg-blue {
+    background:#157ad1!important;
+}
+.sh-bg-light-blue {
+    background:#72afe3!important;
+}
+.sh-bg-dark-red {
+    background:#8c2217!important;
+}
+.sh-bg-red {
+    background:#ea3927!important;
+}
+.sh-bg-light-red {
+    background:#f2887d!important;
+}
+
+
+.sh-text-green {
+    color:#3ab240!important;
+}
+.sh-text-white {
+    color:#fff!important;
+}
+
+/* Color tints and shades */
+
+/* Visual effects */
+.sh-shadow-1 {
+    box-shadow:0 0 2px rgba(0,0,0,0.1);
+}
+.sh-shadow-2 {
+    box-shadow:0 0 4px rgba(0,0,0,0.25);
+}
+.sh-shadow-3 {
+    box-shadow:0 0 5px rgba(0,0,0,0.3);
+}
+.sh-shadow-4 {
+    box-shadow:0 0 7px rgba(0,0,0,0.5);
+}
+.sh-shadow-5 {
+    box-shadow:0 0 8px rgba(0,0,0,0.6);
+}
+.sh-shadow-6 {
+    box-shadow:0 1px 10px rgba(0,0,0,0.7);
+}
+.sh-link-none {
+    color:inherit;
+    text-decoration:none;
+}
+
+/* Headers, styling etc */
+.sh-item-title {
+    font-size:24pt;
+    text-align:center;
+}
+.sh-item-subtitle {
+    font-size:16pt;
+    text-align:center;
+}
+.sh-caption {
+    font-size:16pt;
+    font-style:italic;
+}
+::cselection {
+    color:#111;
+    background:#eee;
+}
+::-moz-selection {
+    color:#111;
+    background:#eee;
+}
+a {
+    text-decoration:none;
+}
+
+/* Elements */
+.sh-code, pre.sh-code {
+    padding:10px;
+    background:#333;
+    color:#eee;
+    box-shadow:inset 0 0 7px #000;
+    word-break:break-all;
+    word-wrap:break-all;
+    text-wrap:break-all;
+    line-height:1;
+    overflow-x:auto;
+}
+.sh-flat-button {
+    border:none;
+    outline:none;
+    display:inline-block;
+    text-decoration:none;
+    padding:10px 20px;
+    text-align:center;
+}
+
+/* Page layout */
+body {
+    padding:10px;
+    overflow-x:hidden;
+}
+.sh-menubar {
+    position:fixed;
+    display:flex;
+    top:0;
+    left:0;
+    right:0;
+    height:40px;
+    background:#eee;
+    box-shadow:0 0 6px 1px rgba(0,0,0,0.4);
+    padding:5px 10px;
+    line-height:30px;
+    font-size:12pt;
+    z-index:99999;
+}
+.sh-menubar div {
+    margin:0 10px;
+}
+#menubar-button {
+    cursor:pointer;
+}
+.sh-sidebar {
+    position:fixed;
+    top:40px;
+    left:0;
+    bottom:0;
+    width:300px;
+    height:0px;
+    max-width:100vw;
+    padding:none;
+    font-size:18pt;
+    background:#eee;
+    box-shadow:0 0 0 1px rgba(0,0,0,0.2);
+    z-index:99998;
+    font-size:10pt;
+    overflow-y:hidden;
+}
+.sh-sidebar-cover {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,0.0);
+    display:none;
+    z-index:99997;
+}
+.sh-sidebar-container div {
+    padding:10px;
+    margin:10px 0;
+    cursor:pointer;
+}
+.sh-content-container {
+    position:absolute;
+    top:40px;
+    left:0;
+    right:0;
+}
+.sh-page-title-container {
+    position:relative;
+    top:0;
+    left:0;
+    right:0;
+    height:240px;
+    margin:none auto 20px;
+    text-align:center;
+}
+.sh-page-title {
+    position:absolute;
+    font-size:48pt;
+    margin:auto!important;
+}
+.sh-grid-container {
+    position:relative;
+    margin:15px auto;
+    display:flex;
+    width:auto;
+    flex-direction:row;
+    flex-flow:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:flex-start;
+}
+.sh-grid-container div {
+    margin:55px auto;
+    margin-bottom:auto!important;
+}
+.sh-grid-1 {
+    width:90%;
+}
+.sh-grid-2 {
+    width:40%;
+}
+.sh-grid-3 {
+    width:23.3333%;
+}
+.sh-grid-4 {
+    width:15.5%;
+}
+.sh-grid-1 div, .sh-grid-3 div, .sh-grid-2 div, .sh-grid-4 div {
+    margin:10px auto;
+}
+.sh-horiz-separator {
+    width:90%;
+    height:1px;
+    background:#000;
+    background:rgba(0,0,0,0.2);
+    margin:25px auto;
+}
+.sh-width-100 {
+    width:100%!important;
+    max-width:100%!important;
+}
+.sh-width-90 {
+    width:90%!important;
+    max-width:90%!important;
+}
+.sh-width-80 {
+    width:80%!important;
+    max-width:90%!important;
+}
+.sh-width-70 {
+    width:70%!important;
+    max-width:90%!important;
+}
+.sh-width-60 {
+    width:60%!important;
+    max-width:90%!important;
+}
+.sh-width-50 {
+    width:50%!important;
+    max-width:90%!important;
+}
+.sh-left {
+    float:left!important;
+}
+.sh-right {
+    float:right!important;
+}
+
+/* Media classes */
+.sh-pic-circle {
+    border-radius:50%!important;
+}
+.sh-pic-w-s {
+    width:50px;
+    height:auto;
+}
+.sh-pic-h-s {
+    height:50px;
+    width:auto;
+}
+.sh-pic-w-m {
+    width:125px;
+    height:auto;
+}
+.sh-pic-h-m {
+    height:125px;
+    width:auto;
+}
+.sh-pic-w-l {
+    width:250px;
+    height:auto;
+}
+.sh-pic-h-l {
+    height:250px;
+    width:auto;
+}
+.sh-pic-w-xl {
+    width:500px;
+    height:auto;
+}
+.sh-pic-h-xl {
+    height:500px;
+    width:auto;
+}
+.sh-pad-10 {
+    padding:10px;
+}
+.sh-flex {
+    display:flex;
+}
+.sh-margin-m10 {
+    margin-bottom:-10px!important;
+}
+
+
+
+/* Responsive to media queries */
+@media screen and (max-width:1100px) {
+    .sh-grid-3 {
+        width:90%;
+        margin:10px auto;
+    }
+    .sh-width-70 {
+        width:90%!important;
+    }
+}
+@media screen and (max-width:720px) {
+    .sh-flex {
+        flex-flow:wrap;
+        flex-wrap:wrap;
+    }
+    img {
+        margin:inherit auto!important;
+    }
+}
+@media screen and (max-width:590px) {
+    .sh-grid-2 {
+        width:90%;
+        margin:10px auto;
+    }
+}
