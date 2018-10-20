@@ -1,0 +1,77 @@
+/*
+    shoddy.css
+    A shoddy CSS framework
+    developed by Chris Shoeman, Jacob Hinkston, Michael Cohagan
+
+    Source
+    NOTIFS
+    v0.3
+*/
+
+/* Alerts */
+.sh-alert {
+    width:400px;
+    max-width:95vw;
+    height:250px;
+    max-height:85vh;
+    position:fixed;
+    top:0;left:0;right:0;bottom:0;
+    margin:auto;
+    z-index:101011;
+    padding:15px;
+    display:none;
+    transform:scale(0.66);
+    opacity:0.0;
+}
+.sh-alert-title {
+    font-size:24pt;
+    margin-bottom:10pt;
+}
+.sh-alert-text {
+    font-size:12pt;
+}
+.sh-alert-buttons{
+    display:flex;
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+.sh-alert-buttons div {
+    cursor:pointer;
+    padding:10px;
+    margin:5px;
+}
+.sh-alert-cover {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,0.0);
+    display:none;
+    z-index:101010;
+}
+
+/* Toasts */
+
+.sh-toast {
+    width:400px;
+    max-width:95vw;
+    height:auto;
+    background:#333;
+    color:#eee;
+    text-align:left;
+    font-size:10pt;
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:0 auto;
+    opacity:0.0;
+    z-index:101011;
+    border-radius:2px;
+    word-break:break-all;
+}
+.sh-toast-text {
+    padding:10px;
+}

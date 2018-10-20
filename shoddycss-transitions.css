@@ -14,9 +14,24 @@
 .sh-sidebar-cover {
     transition:background 0.2s;
 }
+.sh-alert-cover {
+    transition:background 0.2s;
+}
 .sh-flat-button {
     transition:background 0.25s;
 }
 .sh-sidebar-container div {
     transition:background 0.25s;
+}
+.sh-alert {
+    transition:transform 0.15s ease-out, opacity 0.15s;
+}
+.sh-collapsible-contents {
+    transition:height 0.2s ease-in-out;
+}
+.sh-toast {
+    transition:opacity 0.2s, bottom 0.2s;
+}
+input {
+    transition:border-bottom 0.2s;
 }
