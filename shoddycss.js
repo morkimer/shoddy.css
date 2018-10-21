@@ -1,12 +1,5 @@
-/*
-    shoddy.css
-    A shoddy CSS framework
-    developed by Chris Shoeman and Jacob Hinkston
+/* shoddy.css v0.4.0, developed by Chris Shoeman, Michael Cohagan, Ben Shoeman, Jacob Hinkston */
 
-    Source
-    JS
-    v0.3.0
-*/
 var sh_viewportWidth;
 var sh_viewportHeight;
 
@@ -17,13 +10,11 @@ function sh_ToggleSidebar() {
         if (sb.style.transition != ""){sb.style.transition = "height 0.2s ease-out, padding 0.2s";}
         sbc.style.display = "block";
         setTimeout(function(){sbc.style.background = "rgba(0,0,0,0.2)";}, 16);
-        setTimeout(function(){sb.style.overflowY = "auto";}, 300);
         setTimeout(function(){sb.style.padding = "10px";sb.style.height = (sh_viewportHeight - 40) + "px";}, 100);
     }
     else {
         if (sb.style.transition != ""){sb.style.transition = "height 0.2s ease-in, padding 0.2s";}
         sb.style.height = "0px";
-        sb.style.overflowY = "hidden";
         sb.style.padding = "0px";
         sbc.style.background = "rgba(0,0,0,0.0)";
         setTimeout(function() {sbc.style.display = "none";}, 200);
@@ -81,4 +72,16 @@ function sh_GetWindowBounds() {
     sh_viewportWidth = window.innerWidth;
     sh_viewportHeight = window.innerHeight;
 }
+function sh_Hero() {
+    var e = document.querySelectorAll(".sh-hero");
+    if (!e) {return false;}
+    var a = e.length;
+    if (!a) {return false;}
+    var i;
+    for (i = 0; i < a; i++) {
+        var img = e[i].style.backgroundImage;
+        e[i].style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))," + img;
+    }
+}
 sh_GetWindowBounds();
+sh_Hero();
