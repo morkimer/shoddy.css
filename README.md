@@ -14,4 +14,5 @@ The documentation and API are still being worked on, but you can find work-in-pr
 ## Contributors
  - [Chris Shoeman (@morkimer)](https://github.com/morkimer/)
  - [Michael Cohagan (@MSCohagan)](https://github.com/MSCohagan/)
+ - [Ben Shoeman (@BenShoeman)](https://github.com/BenShoeman/)
  - [Jacob Hinkston (@JacobHinkston)](https://github.com/JacobHinkston/)
