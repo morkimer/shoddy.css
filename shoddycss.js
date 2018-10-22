@@ -67,6 +67,36 @@ function sh_Toast(text,time,scale) {
     bar.addEventListener("click", function() {setTimeout(function(){bar.style.bottom = "0";bar.style.opacity=0.0;},16);setTimeout(function(){bar.parentNode.removeChild(bar);},216)});
 }
 
+
+/* Dropdowns */
+var sh_dds = document.getElementsByClassName("sh-dropdown-button");
+var i;
+for (i = 0; i < sh_dds.length; i++) {
+    sh_dds[i].onclick = function() {
+        var d = this.parentNode.children;
+        for (var i = 0; i < d.length; i++) {
+            if (!d[i].className){break;}
+            else {
+                if (d[i].className.includes("sh-dropdown-items")) {
+                    d[i].classList.toggle("sh-dropdown-active");
+                    break;
+                }
+            }
+        }
+    };
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.sh-dropdown-button')) {
+    var add = document.getElementsByClassName("sh-dropdown-items");
+    var i;
+    for (i = 0; i < add.length; i++) {
+      if (add[i].classList.contains('sh-dropdown-active')) {
+        add[i].classList.remove('sh-dropdown-active');
+      }
+    }
+  }
+} 
+
 /* General initialization */
 function sh_GetWindowBounds() {
     sh_viewportWidth = window.innerWidth;
@@ -83,5 +113,10 @@ function sh_Hero() {
         e[i].style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))," + img;
     }
 }
-sh_GetWindowBounds();
-sh_Hero();
+function sh_DropDown() {
+    var e = document.querySelectorAll(".sh-dropdown-button");
+    for (var i = 0; i < e.length; i++) {
+        e[i].innerHTML += '<span class="sh-dropdown-button-arrow">&#9662;</span>';
+    }
+}
+sh_GetWindowBounds();sh_Hero();sh_DropDown();
