@@ -1,5 +1,15 @@
-/* shoddy.css v0.4.0, developed by Chris Shoeman, Michael Cohagan, Ben Shoeman, Jacob Hinkston */
+/*
+    shoddy.css 0.4.0
+    http://www.compii.net/shoddycss/
+    Copyright 2018 morkimer
+    MIT License: https://raw.githubusercontent.com/morkimer/shoddy.css/master/LICENSE
+*/
 
+
+// These are the variables you can modify in a separate config file.
+var sh_UseMaterialIcons;
+
+// These variables are automatically updated.
 var sh_viewportWidth;
 var sh_viewportHeight;
 
@@ -98,6 +108,11 @@ window.onclick = function(event) {
 } 
 
 /* General initialization */
+function sh_LoadOptions() {
+    if (sh_UseMaterialIcons == true) {
+        document.head.innerHTML += '<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons" />';
+    }
+}
 function sh_GetWindowBounds() {
     sh_viewportWidth = window.innerWidth;
     sh_viewportHeight = window.innerHeight;
@@ -120,3 +135,4 @@ function sh_DropDown() {
     }
 }
 sh_GetWindowBounds();sh_Hero();sh_DropDown();
+setTimeout(sh_LoadOptions, 5);
